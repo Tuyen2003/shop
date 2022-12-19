@@ -1,4 +1,4 @@
-<?php require_once 'core/boot.php'; ?>
+<?php require_once 'core/boot.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,66 +6,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="public/css/style.css">
+    <title>Document</title>
 </head>
 
 <body>
-    <?php include 'inc/header.php'; ?>
-    <?php include 'inc/navbar.php'; ?>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-    <!-- login -->
-    <div class="container py-16">
-        <div class="max-w-lg mx-auto shadow px-6 py-7 rounded overflow-hidden">
-            <h2 class="text-2xl uppercase font-medium mb-1">Login</h2>
-            <p class="text-gray-600 mb-6 text-sm">
-                Login if you are a returing customer
-            </p>
-            <form action="login.php" method="post">
-                <i style="color: red;"><?php if(isset( $_SESSION['flash_message'])) echo  $_SESSION['flash_message']; unset( $_SESSION['flash_message']); ?></i>
-                <div class="space-y-4">
-                    <div>
-                        <label class="text-gray-600 mb-2 block">Email Address</label>
-                        <input name="email" type="email" class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:border-primary placeholder-gray-400" placeholder="Enter your email address">
-                    </div>
-                    <div>
-                        <label class="text-gray-600 mb-2 block">Password</label>
-                        <input name="password" type="password" class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:border-primary placeholder-gray-400" placeholder="Enter your password">
-                    </div>
-                </div>
-                <div class="flex items-center justify-between mt-6">
-                    <div class="flex items-center">
-                        <input type="checkbox" id="agreement" class="text-primary focus:ring-0 rounded-sm cursor-pointer">
-                        <label for="agreement" class="text-gray-600 ml-3 cursor-pointer">Remember me</label>
-                    </div>
-                    <a href="#" class="text-primary">Forgot password?</a>
-                </div>
-                <div class="mt-4">
-                    <button type="submit" class="block w-full py-2 text-center text-white bg-primary border border-primary roundded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium">
-                        Login
-                    </button>
-                </div>
-            </form>
+        * {
+            box-sizing: border-box;
+        }
 
-            <!-- login with -->
-            <div class="mt-6 flex justify-center relative">
-                <div class="text-gray-600 uppercase px-3 bg-white z-10 relative">Or login with</div>
-                <div class="absolute left-0 top-3 w-full border-b-2 border-gray-200 "></div>
+        #wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        form {
+            border: 1px solid #dadce0;
+            border-radius: 5px;
+            padding: 30px;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        input {
+            height: 50px;
+            width: 300px;
+            outline: none;
+            border: 1px solid #dadce0;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: inherit;
+            color: #202124;
+        }
+
+        label {
+            position: absolute;
+            padding: 0px 5px;
+            left: 5px;
+            /* quan trong*/
+            pointer-events: none;
+            transform: translateY(-50%);
+            top: 50%;
+            background: #fff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .form-group input:focus {
+            border: 2px solid #1a73e8;
+        }
+
+        .form-group input:focus+label,
+        .form-group input:valid+label {
+            top: 0px;
+            font-size: 13px;
+            color: #1a73e8;
+        }
+
+        input#bnt-login {
+            background: #1a73e8;
+            color: #fff;
+        }
+
+        input#bnt-login:hover {
+            opacity: 0.85;
+        }
+
+        a {
+            margin-top: 15px;
+            text-decoration: none;
+            color: #202124;
+
+
+        }
+
+        .a {
+            display: inline;
+            margin-left: 80px;
+        }
+
+        .link {
+            margin-top: 15px;
+            text-decoration: none;
+            color: #202124;
+        }
+    </style>
+    <div id="wrapper">
+        <form action="login.php" method="POST">
+            <i style="color: red;"><?php if (isset($_SESSION['flash_message'])) echo  $_SESSION['flash_message'];
+                                    unset($_SESSION['flash_message']); ?></i>
+            <h3>Đăng nhập</h3>
+            <div class="form-group">
+                <input type="text" name="email" required>
+                <label for="">Email</label>
             </div>
-            <div class="flex mt-4 gap-4">
-                <a href="#" class="w-1/2 py-2 text-center text-white bg-blue-800 rounded uppercase font-roboto font-medium text-sm hover:bg-blue-700 ">Facebook</a>
-                <a href="#" class="w-1/2 py-2 text-center text-white bg-yellow-600 rounded uppercase font-roboto font-medium text-sm hover:bg-yellow-500 ">Google</a>
+            <div class="form-group">
+                <input type="password" name="password" required>
+                <label for="">Mật khẩu</label>
             </div>
-            <!-- login with end-->
-            <p class="mt-4 text-gray-600 text-center">
-                Don't have an account? <a href="register.html" class="text-primary">Register now</a>
-            </p>
-        </div>
+            <input type="submit" value="Đăng nhập" id="bnt-login">
+
+            <div class="link">
+                <a href="index.php" class="">Quay về trang chủ</a>
+                <a href="register.php" class="a">Đăng kí</a>
+            </div>
+        </form>
     </div>
-    <!-- login end-->
-
-    <?php include 'inc/footer.php'; ?>
 
 </body>
 

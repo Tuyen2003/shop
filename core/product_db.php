@@ -25,39 +25,13 @@ function get_all_products(){
             'description' => $row['description'],
             'price' => $row['price'],
             'img' => $row['img'],
-            'category_id' => $row['category_id']
+            'categories_id' => $row['categories_id']
         );
     }
     
     return $product_list;
 }
 
-function get_all_categories(){
-    global $pdo;
-
-    $sql = "SELECT * FROM CATEGORIES";
-    $stmt = $pdo->prepare($sql);
-    
-
-    $stmt->execute();
-    $stmt->setFetchMode(PDO::FETCH_ASSOC); 
-     
-    // Lấy danh sách kết quả
-    $result = $stmt->fetchAll();
-     
-    $category_list = array();
-
-    // Lặp kết quả
-    foreach ($result as $row){
-        $category_list[] = array(
-            'id' => $row['id'],
-            'name' => $row['name'],
-            'img' => $row['img']
-        );
-    }
-    
-    return $category_list;
-}
 
 /**
  * Get Product detail
@@ -86,7 +60,7 @@ function get_product($id){
             'description' => $row['description'],
             'price' => $row['price'],
             'img' => $row['img'],
-            'category_id' => $row['category_id']
+            'categories_id' => $row['categories_id']
         );
     }
 
@@ -157,7 +131,7 @@ function get_products_by_name($name){
             'description' => $row['description'],
             'price' => $row['price'],
             'img' => $row['img'],
-            'category_id' => $row['category_id']
+            'categories_id' => $row['categories_id']
         );
     }
     
@@ -198,4 +172,46 @@ function get_products_related($product_id, $category_id){
     }
     
     return $product_list;
+}
+function insert_product($name, $img, $category_id,$price)
+{
+    global $pdo;
+    $sql = "INSERT INTO PRODUCTS(ID, NAME, IMG, CATEGORY_ID,PRICE) VALUES(NULL, :name, :img, :category_id,:price)";
+    $stmt = $pdo->prepare($sql);
+
+
+    $stmt->bindParam(':name', $name);
+    $stmt->bindParam(':img', $img);
+    $stmt->bindParam(':category_id', $category_id);
+    $stmt->bindParam(':price', $price);
+
+
+    $stmt->execute();
+}
+function update_product($id, $name, $img,$price)
+{
+    global $pdo;
+    $sql = "UPDATE PRODUCTS SET NAME=:name, IMG=:img, PRICE=:price WHERE ID=:id";
+    $stmt = $pdo->prepare($sql);
+
+
+    $stmt->bindParam(':name', $name);
+    $stmt->bindParam(':img', $img);
+    $stmt->bindParam(':id', $id);
+    $stmt->bindParam(':price', $price);
+   
+
+
+
+    $stmt->execute();
+}
+function delete_product($id)
+{
+    global $pdo;
+
+    $sql = "DELETE FROM PRODUCTS WHERE ID=:id";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':id', $id);
+
+    $stmt->execute();
 }

@@ -1,82 +1,120 @@
-<!-- footer -->
-<footer class="bg-white pt-16 pb-12 border-t border-gray-100">
-    <div class="container grid grid-cols-3">
-        <!-- footer text -->
-        <div class="col-span-1 space-y-8">
-            <img src="./public/images/logo.svg" class="w-30" alt="">
-            <p class="text-gray-500">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis voluptas quasi recusandae
+<footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div class="">
+        <a href="" class="me-4 text-reset ">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Company name
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
             </p>
-            <div class="flex space-x-6">
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
-        </div>
-        <!-- footer text end-->
+          </div>
+          <!-- Grid column -->
 
-        <!-- footer links -->
-        <div class="col-span-2 grid grid-cols-2 gap-8">
-            <div class="grid grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Solutions</h3>
-                    <div class="mt-4 space-y-4">
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Marketing</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Analytics</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Commerce</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Insights</a>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Support</h3>
-                    <div class="mt-4 space-y-4">
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Pricing</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Documentation</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Guides</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">API Status</a>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Company</h3>
-                    <div class="mt-4 space-y-4">
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">About</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Blog</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Jobs</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Press</a>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Legal</h3>
-                    <div class="mt-4 space-y-4">
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Claim</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Privacy</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Policy</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Terms</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- footer links end-->
-    </div>
-</footer>
-<!-- footer end-->
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset nav-link">Angular</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset nav-link">React</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset nav-link">Vue</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset nav-link">Laravel</a>
+            </p>
+          </div>
+          <!-- Grid column -->
 
-<!-- copyright -->
-<div class="bg-gray-800 py-4">
-    <div class="container flex items-center justify-between">
-        <p class="text-white">@ RAFCART - All Rights Reserved</p>
-        <img src="./public/images/payment-method.png" class="h-5" alt="">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset nav-link">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset nav-link">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset nav-link">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset nav-link">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
     </div>
-</div>
-<!-- copyright end-->
+    <!-- Copyright -->
+  </footer>
